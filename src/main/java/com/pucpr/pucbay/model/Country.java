@@ -7,27 +7,27 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="tb_country")
-public class Country {
+public class Country extends Resource {
 
     @Id
     @GeneratedValue
-    private int id;
+    private String country_id;
     private String name;
 
     public Country() {
     }
 
-    public Country(int id, String name) {
-        this.id = id;
+    public Country(String id, String name) {
+        this.country_id = id;
         this.name = name;
     }
 
-    public int getId() {
-        return id;
+    public String getId() {
+        return country_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(String id) {
+        this.country_id = id;
     }
 
     public String getName() {

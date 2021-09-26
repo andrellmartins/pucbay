@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="tb_seller")
-public class Seller {
+public class Seller extends Resource {
 
     @Id
     @GeneratedValue
