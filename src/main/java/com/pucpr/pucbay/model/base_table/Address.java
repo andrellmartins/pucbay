@@ -1,4 +1,4 @@
-package com.pucpr.pucbay.model;
+package com.pucpr.pucbay.model.base_table;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="tb_address")
-public class Address extends Resource{
+public class Address{
 
     @Id
     @GeneratedValue

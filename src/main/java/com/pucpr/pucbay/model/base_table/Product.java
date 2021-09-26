@@ -1,5 +1,4 @@
-package com.pucpr.pucbay.model;
-
+package com.pucpr.pucbay.model.base_table;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="tb_product")
-public class Product extends Resource {
+public class Product{
 
     @Id
     @GeneratedValue
@@ -29,7 +28,6 @@ public class Product extends Resource {
     private String stop_time;
     private String condition;
     private String permalink;
-
 
     public Product() {
     }
@@ -181,3 +179,4 @@ public class Product extends Resource {
         this.permalink = permalink;
     }
 }
+

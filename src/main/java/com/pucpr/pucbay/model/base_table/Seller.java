@@ -1,4 +1,4 @@
-package com.pucpr.pucbay.model;
+package com.pucpr.pucbay.model.base_table;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,8 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="tb_seller")
-public class Seller extends Resource {
-
+public class Seller{
     @Id
     @GeneratedValue
     private int seller_id;

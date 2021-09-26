@@ -1,4 +1,4 @@
-package com.pucpr.pucbay.model;
+package com.pucpr.pucbay.model.base_table;
 
 import javax.persistence.*;
 

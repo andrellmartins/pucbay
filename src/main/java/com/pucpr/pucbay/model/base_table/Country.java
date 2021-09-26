@@ -1,4 +1,4 @@
-package com.pucpr.pucbay.model;
+package com.pucpr.pucbay.model.base_table;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,28 +6,28 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_estate")
-public class Estate extends Resource {
+@Table(name="tb_country")
+public class Country{
 
     @Id
     @GeneratedValue
-    private String estate_id;
+    private String country_id;
     private String name;
 
-    public Estate() {
+    public Country() {
     }
 
-    public Estate(String estate_id, String name) {
-        this.estate_id = estate_id;
+    public Country(String id, String name) {
+        this.country_id = id;
         this.name = name;
     }
 
-    public String getEstate_id() {
-        return estate_id;
+    public String getId() {
+        return country_id;
     }
 
-    public void setEstate_id(String id) {
-        this.estate_id = id;
+    public void setId(String id) {
+        this.country_id = id;
     }
 
     public String getName() {
