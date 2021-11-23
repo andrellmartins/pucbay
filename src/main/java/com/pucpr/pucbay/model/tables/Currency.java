@@ -1,9 +1,8 @@
-package com.pucpr.pucbay.model.base_table;
+package com.pucpr.pucbay.model.tables;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="tb_currency", uniqueConstraints = @UniqueConstraint (columnNames = "currency_id", name = "cod" ))
 public class Currency {
 
 

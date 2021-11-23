@@ -1,7 +1,5 @@
-package com.pucpr.pucbay.model.interfaces;
+package com.pucpr.pucbay.controller.service;
 
-import com.pucpr.pucbay.model.base_table.Product;
-import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import java.util.Optional;
 

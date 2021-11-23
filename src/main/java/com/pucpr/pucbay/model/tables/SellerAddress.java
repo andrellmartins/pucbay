@@ -1,13 +1,11 @@
-package com.pucpr.pucbay.model.base_table;
+package com.pucpr.pucbay.model.tables;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_address")
-public class Address{
+public class SellerAddress {
 
     @Id
     @GeneratedValue
@@ -16,10 +14,10 @@ public class Address{
     private int estate_id;
     private int country_id;
 
-    public Address() {
+    public SellerAddress() {
     }
 
-    public Address(int address_id, int city_id, int estate_id, int country_id) {
+    public SellerAddress(int address_id, int city_id, int estate_id, int country_id) {
         this.address_id = address_id;
         this.city_id = city_id;
         this.estate_id = estate_id;

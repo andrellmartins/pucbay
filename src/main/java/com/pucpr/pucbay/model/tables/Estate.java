@@ -1,16 +1,13 @@
-package com.pucpr.pucbay.model.base_table;
+package com.pucpr.pucbay.model.tables;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_estate")
 public class Estate{
 
     @Id
-    @GeneratedValue
     private String estate_id;
     private String name;
 

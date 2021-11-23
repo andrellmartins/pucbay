@@ -1,18 +1,21 @@
-package com.pucpr.pucbay.model.base_table;
+package com.pucpr.pucbay.model.tables;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.*;
+import java.io.Serializable;
 
 
 @Entity
-@Table(name="tb_product")
-public class Product{
+@EntityListeners(AuditingEntityListener.class)
+public class Product implements Serializable {
+
 
     @Id
-    @GeneratedValue
-    private String id;
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String product_id;
     private String site_id;
     private String title;
     private int id_integracao;
@@ -21,42 +24,28 @@ public class Product{
     private double price;
     private double base_price;
     private double original_price;
-    private String currency_id;
     private int initial_quantity;
     private int available_quantity;
+    private String currency_id;
     private String start_time;
     private String stop_time;
     private String condition;
     private String permalink;
 
-    public Product() {
-    }
-
-    public Product(String id, String site_id, String title, int id_integracao, int subtitle, int seller_id, double price, double base_price, double original_price, String currency_id, int initial_quantity, int available_quantity, String start_time, String stop_time, String condition, String permalink) {
-        this.id = id;
-        this.site_id = site_id;
-        this.title = title;
-        this.id_integracao = id_integracao;
-        this.subtitle = subtitle;
-        this.seller_id = seller_id;
-        this.price = price;
-        this.base_price = base_price;
-        this.original_price = original_price;
-        this.currency_id = currency_id;
-        this.initial_quantity = initial_quantity;
-        this.available_quantity = available_quantity;
-        this.start_time = start_time;
-        this.stop_time = stop_time;
-        this.condition = condition;
-        this.permalink = permalink;
-    }
-
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getProduct_id() {
+        return product_id;
+    }
+
+    public void setProduct_id(String product_id) {
+        this.product_id = product_id;
     }
 
     public String getSite_id() {
@@ -178,5 +167,5 @@ public class Product{
     public void setPermalink(String permalink) {
         this.permalink = permalink;
     }
-}
 
+}

@@ -1,7 +1,7 @@
 package com.pucpr.pucbay.model.repository;
 
 
-import com.pucpr.pucbay.model.base_table.User;
+import com.pucpr.pucbay.model.tables.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

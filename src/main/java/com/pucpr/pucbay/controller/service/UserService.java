@@ -1,8 +1,7 @@
 package com.pucpr.pucbay.controller.service;
 
 
-import com.pucpr.pucbay.model.base_table.User;
-import com.pucpr.pucbay.model.interfaces.CrudInterface;
+import com.pucpr.pucbay.model.tables.User;
 import com.pucpr.pucbay.model.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService implements CrudInterface<User> {
+public abstract class UserService implements CrudInterface<User> {
 
     @Autowired
     private UserRepository userRepository;

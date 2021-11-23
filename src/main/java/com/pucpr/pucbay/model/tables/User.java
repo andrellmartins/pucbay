@@ -1,4 +1,4 @@
-package com.pucpr.pucbay.model.base_table;
+package com.pucpr.pucbay.model.tables;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;

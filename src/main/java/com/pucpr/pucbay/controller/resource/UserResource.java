@@ -1,7 +1,7 @@
 package com.pucpr.pucbay.controller.resource;
 
 import com.pucpr.pucbay.controller.service.UserService;
-import com.pucpr.pucbay.model.base_table.User;
+import com.pucpr.pucbay.model.tables.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
