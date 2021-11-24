@@ -1,6 +1,7 @@
 package com.pucpr.pucbay.controller.service;
 
 
+import com.pucpr.pucbay.model.objetcs.ProductSimplified;
 import com.pucpr.pucbay.model.tables.Product;
 import com.pucpr.pucbay.model.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +19,13 @@ public class ProductService
     private ProductRepository productRepository;
 
 
+
     @Override
     public List<Product> findAll() {
-
         return productRepository.findAll();
     }
+
+
 
     @Override
     public Optional<Product> save(Product entity) {
@@ -50,5 +53,7 @@ public class ProductService
     }
 
 
-
+    public List<ProductSimplified> getTitleQuantity() {
+        return productRepository.getTitleQuantity();
+    }
 }

@@ -1,5 +1,6 @@
 package com.pucpr.pucbay.model.repository;
 
+import com.pucpr.pucbay.model.objetcs.ProductSimplified;
 import com.pucpr.pucbay.model.tables.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -15,10 +16,11 @@ public interface ProductRepository
 
     public List<Product> findProductByTitle(String title);
 
-    @Query("select p from Product p where p.id in (:lista)")
-    public List<Product> findById();
+    public List<Product> findById(Integer id);
 
-    @Query("SELECT p.title, p.available_quantity FROM Product p")
+    @Query("SELECT new com.pucpr.pucbay.model.objetcs.ProductSimplified(p.title, p.available_quantity) FROM Product p")
+    public List<ProductSimplified> getTitleQuantity();
+
     public List<Product> findAll();
 
     /*//ESTAS MERDAS NÃO FUNCIONAM!!!!!!! NAO SEI OQ FAZER ...

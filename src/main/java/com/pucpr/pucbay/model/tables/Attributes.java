@@ -1,9 +1,6 @@
 package com.pucpr.pucbay.model.tables;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
+import javax.persistence.*;
 
 @Entity
 public class Attributes {
@@ -12,7 +9,7 @@ public class Attributes {
     @GeneratedValue
     private Long id;
     private String type;
-    public String value_name;
+    private String value_name;
 
     public long getId() {
         return id;
