@@ -1,9 +1,13 @@
 package com.pucpr.pucbay.model.tables;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.lang.Nullable;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Attributes {
+public class Attributes implements Serializable {
 
     @Id
     @GeneratedValue
