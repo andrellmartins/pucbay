@@ -1,4 +1,4 @@
-package com.pucpr.pucbay.model.objetcs;
+package com.pucpr.pucbay.model.objects;
 
 public class UserLogin {
     private String username;

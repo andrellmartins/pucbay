@@ -1,12 +1,13 @@
 package com.pucpr.pucbay.controller.service;
 
 
-import com.pucpr.pucbay.model.objetcs.ProductSimplified;
+import com.pucpr.pucbay.model.objects.ProductSimplified;
 import com.pucpr.pucbay.model.tables.Product;
 import com.pucpr.pucbay.model.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,14 +19,10 @@ public class ProductService
     @Autowired
     private ProductRepository productRepository;
 
-
-
     @Override
     public List<Product> findAll() {
         return productRepository.findAll();
     }
-
-
 
     @Override
     public Optional<Product> save(Product entity) {
@@ -34,7 +31,7 @@ public class ProductService
 
     @Override
     public Optional<Product> findById(long id) {
-        return productRepository.findById(id);
+        return Optional.of(productRepository.findById(id));
     }
 
     @Override
@@ -52,8 +49,8 @@ public class ProductService
         return productRepository.count();
     }
 
-
     public List<ProductSimplified> getTitleQuantity() {
         return productRepository.getTitleQuantity();
     }
+
 }

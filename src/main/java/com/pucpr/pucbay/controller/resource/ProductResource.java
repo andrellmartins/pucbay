@@ -2,7 +2,7 @@ package com.pucpr.pucbay.controller.resource;
 
 
 import com.pucpr.pucbay.controller.service.ProductService;
-import com.pucpr.pucbay.model.objetcs.ProductSimplified;
+import com.pucpr.pucbay.model.objects.ProductSimplified;
 import com.pucpr.pucbay.model.tables.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +17,11 @@ public class ProductResource {
     @Autowired
     private ProductService productService;
 
+
+    @GetMapping(value = "/{id}")
+    public Object getProductById(@PathVariable long id) {
+        return productService.findById(id);
+    }
 
     @GetMapping(value = "/list")
     public List<ProductSimplified> getProductList() {
@@ -38,18 +43,14 @@ public class ProductResource {
     @PutMapping("/")
     public ResponseEntity<Product> update(
             @RequestBody Product product) {
-
         productService.save(product);
-
         return ResponseEntity.ok().body(product);
     }
 
-    @DeleteMapping("/")
-    public ResponseEntity<String> delete(
-            @RequestBody Product product) {
-
-        productService.delete(product);
-        return ResponseEntity.ok().body("Product excluded " + product.getId());
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> delete(@PathVariable long id) {
+        productService.deleteById(id);
+        return ResponseEntity.ok().body("Product " + id + " excluded");
     }
 
 

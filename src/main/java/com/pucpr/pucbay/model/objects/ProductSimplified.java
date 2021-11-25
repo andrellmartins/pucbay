@@ -1,4 +1,4 @@
-package com.pucpr.pucbay.model.objetcs;
+package com.pucpr.pucbay.model.objects;
 
 import java.io.Serializable;
 

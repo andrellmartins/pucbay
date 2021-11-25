@@ -7,7 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.pucpr.pucbay.controller.service.TokenAuthService;
-import com.pucpr.pucbay.model.objetcs.UserLogin;
+import com.pucpr.pucbay.model.objects.UserLogin;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
