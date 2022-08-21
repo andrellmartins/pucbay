@@ -17,7 +17,7 @@ public interface ProductRepository
 
     public Product findById(long id);
 
-    @Query("SELECT new com.pucpr.pucbay.model.objects.ProductSimplified(p.title, p.available_quantity) FROM Product p")
+    @Query(value="SELECT new com.pucpr.pucbay.model.objects.ProductSimplified(p.title, p.available_quantity) FROM Product p", nativeQuery = true)
     public List<ProductSimplified> getTitleQuantity();
 
     public List<Product> findAll();
